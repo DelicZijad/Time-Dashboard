@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 250ms;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(226deg, 43%, 10%);
+  color: white;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+  }
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-block: 5rem;
+  padding-inline: 2rem;
+}
+
+.content {
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    gap: 1rem;
+  }
+}
+
+.profile {
+  border-radius: 10px;
+  background-color: hsl(235deg, 46%, 20%);
+}
+@media screen and (min-width: 1024px) {
+  .profile {
+    grid-row: 1/span 2;
+  }
+}
+.profile--basic {
+  border-radius: 10px;
+  background-color: hsl(246deg, 80%, 60%);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .profile--basic {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.profile--picture {
+  border: 3px solid white;
+  border-radius: 50%;
+}
+@media screen and (min-width: 1024px) {
+  .profile--picture {
+    height: 80px;
+    width: 80px;
+  }
+}
+.profile--picture img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.profile--report {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  color: hsl(236deg, 100%, 87%);
+}
+.profile--name {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 1024px) {
+  .profile--name {
+    font-size: 2rem;
+  }
+}
+.profile--modes {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  gap: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .profile--modes {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: max-content;
+    gap: 1rem;
+  }
+}
+.profile--mode {
+  text-transform: capitalize;
+  background-color: transparent;
+  color: hsl(235deg, 45%, 61%);
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.profile--mode:hover, .profile--mode:focus {
+  color: white;
+}
+
+.card {
+  border-radius: 15px;
+  background-position: 95% 10%;
+  background-repeat: no-repeat;
+  background-size: 20%;
+  padding-top: 3rem;
+}
+@media screen and (min-width: 1024px) {
+  .card {
+    padding-top: 2rem;
+    background-position: 95% 0%;
+    background-size: 25%;
+  }
+}
+.card--info {
+  cursor: pointer;
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 15px;
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+.card--info:hover, .card--info:focus {
+  background-color: #22275d;
+}
+@media screen and (min-width: 1024px) {
+  .card--info {
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.card--infoType {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+.card--hours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .card--hours {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+.card--heading {
+  font-size: 18px;
+  font-weight: 300;
+}
+.card--current {
+  font-size: 2rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 1024px) {
+  .card--current {
+    font-size: 2.5rem;
+  }
+}
+.card--previous {
+  color: hsl(236deg, 100%, 87%);
+}
+
+#play {
+  background-color: hsl(195deg, 74%, 62%);
+  background-image: url("/images/icon-play.svg");
+}
+
+#work {
+  background-color: hsl(15deg, 100%, 70%);
+  background-image: url("/images/icon-work.svg");
+}
+
+#exercise {
+  background-color: hsl(145deg, 58%, 55%);
+  background-image: url("/images/icon-exercise.svg");
+}
+
+#study {
+  background-color: hsl(348deg, 100%, 68%);
+  background-image: url("/images/icon-study.svg");
+}
+
+#social {
+  background-color: hsl(264deg, 64%, 52%);
+  background-image: url("/images/icon-social.svg");
+}
+
+#self-care {
+  background-color: hsl(43deg, 84%, 65%);
+  background-image: url("/images/icon-self-care.svg");
+}
+
+.active {
+  color: white !important;
+}
